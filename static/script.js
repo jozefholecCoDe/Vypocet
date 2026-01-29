@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p style="color: #475569; font-size: 10px; margin: 2px 0 0 0; font-weight: bold;">Vyhotovené: ${now}</p>
                 </div>
                 
-                <div style="display: flex; flex-wrap: wrap; background: #eff6ff; padding: 12px; border: 1px solid #bfdbfe; border-left: 5px solid #1d4ed8; border-radius: 4px; margin-bottom: 20px; color: #1e3a8a; font-size: 11px; line-height: 1.5;">
+                <div style="display: flex; flex-wrap: wrap; background: #eff6ff; padding: 12px; border: 1px solid #bfdbfe; border-left: 5px solid #1d4ed8; border-radius: 4px; margin-bottom: 20px; color: #1e3a8a; font-size: 11px; letter-spacing: 0.5px; line-height: 1.5;">
                     <div style="flex: 1; min-width: 180px;">
                         <p style="margin: 3px 0;"><strong><span style="color: #1d4ed8;">●</span> Klient:</strong> <span style="color: #000;">${clientName}</span></p>
                         <p style="margin: 3px 0;"><strong><span style="color: #1d4ed8;">●</span> Agent:</strong> <span style="color: #000;">${managerName}</span></p>
@@ -138,14 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 4. FINÁLNY DIZAJN (Vynútená biela a čierna s vysokým kontrastom)
             let tableHTML = `
-                <div style="width: 100%; font-family: Arial, sans-serif; background-color: #ffffff;">
+                <div style="width: 100%; font-family: Arial, sans-serif; background-color: #ffffff; letter-spacing: 0.5px;">
                 <table style="width: 100%; border-collapse: collapse; table-layout: fixed; border: 2px solid #1e40af;">
                     <thead>
                         <tr style="background-color: #3759c8 !important; -webkit-print-color-adjust: exact;">
-                            <th style="width: 50%; padding: 12px 10px; border: 1px solid #1e40af; text-align: left; color: #ffffff !important; font-size: 11px; font-weight: 900; text-shadow: 0px 0px 1px #ffffff;">RIZIKO / POISTNÁ UDALOSŤ</th>
-                            <th style="width: 25%; padding: 12px 10px; border: 1px solid #1e40af; text-align: right; color: #ffffff !important; font-size: 11px; font-weight: 900; text-shadow: 0px 0px 1px #ffffff;">ZÁKLADNÁ SUMA</th>
-                            ${document.getElementById('bonus_15').checked ? '<th style="width: 25%; padding: 12px 10px; border: 1px solid #1e40af; text-align: right; color: #ffffff !important; font-size: 11px; font-weight: 900; text-shadow: 0px 0px 1px #ffffff;">BONUS 15%</th>' : ''}
-                            ${document.getElementById('bonus_25').checked ? '<th style="width: 25%; padding: 12px 10px; border: 1px solid #1e40af; text-align: right; color: #ffffff !important; font-size: 11px; font-weight: 900; text-shadow: 0px 0px 1px #ffffff;">BONUS 25%</th>' : ''}
+                            <th style="width: 50%; padding: 12px 10px; border: 1px solid #1e40af; text-align: left; color: #ffffff !important; font-size: 11px; font-weight: 900; text-shadow: 0px 0px 1px #ffffff; letter-spacing: 0.5px;">RIZIKO / POISTNÁ UDALOSŤ</th>
+                            <th style="width: 25%; padding: 12px 10px; border: 1px solid #1e40af; text-align: right; color: #ffffff !important; font-size: 11px; font-weight: 900; text-shadow: 0px 0px 1px #ffffff; letter-spacing: 0.5px;">ZÁKLADNÁ SUMA</th>
+                            ${document.getElementById('bonus_15').checked ? '<th style="width: 25%; padding: 12px 10px; border: 1px solid #1e40af; text-align: right; color: #ffffff !important; font-size: 11px; font-weight: 900; text-shadow: 0px 0px 1px #ffffff; letter-spacing: 0.5px;">BONUS 15%</th>' : ''}
+                            ${document.getElementById('bonus_25').checked ? '<th style="width: 25%; padding: 12px 10px; border: 1px solid #1e40af; text-align: right; color: #ffffff !important; font-size: 11px; font-weight: 900; text-shadow: 0px 0px 1px #ffffff; letter-spacing: 0.5px;">BONUS 25%</th>' : ''}
                         </tr>
                     </thead>
                     <tbody>
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const textAlign = index === 0 ? 'left' : 'right';
                                 // Tu vynucujeme SÝTU ČIERNU a hrubšie písmo
                                 tableHTML += `
-                                    <td style="padding: 8px 10px; border: 1px solid #cbd5e1; text-align: ${textAlign}; color: #000000 !important; font-size: 10px; font-weight: ${index === 0 ? '500' : '700'};">
+                                    <td style="padding: 8px 10px; border: 1px solid #cbd5e1; text-align: ${textAlign}; color: #000000 !important; font-size: 12px; font-weight: ${index === 0 ? '500' : '700'}; letter-spacing: 0.3px; line-height: 1.4;">
                                         ${cell.innerText.trim()}
                                     </td>`;
                             }
@@ -203,5 +203,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
-
