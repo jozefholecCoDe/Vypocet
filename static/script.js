@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const textAlign = index === 0 ? 'left' : 'right';
                                 // Tu vynucujeme SÝTU ČIERNU a hrubšie písmo
                                 tableHTML += `
-                                    <td style="padding: 8px 10px; border: 1px solid #cbd5e1; text-align: ${textAlign}; color: #000000 !important; font-size: 11px; font-weight: ${index === 0 ? '500' : '700'};">
+                                    <td style="padding: 8px 10px; border: 1px solid #cbd5e1; text-align: ${textAlign}; color: #000000 !important; font-size: 10px; font-weight: ${index === 0 ? '500' : '700'};">
                                         ${cell.innerText.trim()}
                                     </td>`;
                             }
@@ -203,4 +203,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
 
