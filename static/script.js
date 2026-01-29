@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const textAlign = index === 0 ? 'left' : 'right';
                                 // Tu vynucujeme SÝTU ČIERNU a hrubšie písmo
                                 tableHTML += `
-                                    <td style="padding: 8px 10px; border: 1px solid #cbd5e1; text-align: ${textAlign}; color: #000000 !important; font-size: 12px; font-weight: ${index === 0 ? '500' : '700'}; letter-spacing: 0.3px; line-height: 1.4;">
+                                    <td style="padding: 8px 10px; border: 1px solid #cbd5e1; text-align: ${textAlign}; color: #000000 !important; font-size: 12px; font-weight: ${index === 0 ? '500' : '700'}; line-height: 1.4;">
                                         ${cell.innerText.trim()}
                                     </td>`;
                             }
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 filename: `Analyza_${clientName.replace(/\s+/g, '_')}.pdf`,
                 image: { type: 'png' }, // PNG je lepšie pre text ako JPEG
                 html2canvas: { 
-                    scale: 2, // Zvýšená mierka pre maximálnu ostrosť textu
+                    scale: 4, // Zvýšená mierka pre maximálnu ostrosť textu
                     useCORS: true,
                     backgroundColor: '#ffffff',
                     letterRendering: true, // Pomáha s čitateľnosťou písmen
