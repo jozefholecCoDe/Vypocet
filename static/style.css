@@ -1,0 +1,108 @@
+:root {
+    --primary: #2563eb;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #1e293b;
+    --border: #e2e8f0;
+    --section-bg: #f1f5f9;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 1150px;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 25px;
+}
+
+header {
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+
+h1 { margin: 0; color: var(--primary); font-size: 1.6rem; }
+h3 { margin-top: 0; border-left: 4px solid var(--primary); padding-left: 10px; font-size: 1.1rem; }
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+}
+
+/* Vstupy */
+.input-group { margin-bottom: 15px; }
+label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px; }
+input { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 1rem; }
+.grid-inputs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+/* TABUĽKA - OPRAVY */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+/* Zjednotenie farby hlavičky */
+thead tr {
+    background-color: var(--bg) !important;
+}
+
+th {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+    background-color: var(--bg) !important; /* Toto opraví biely fľak */
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* Nadpisy sekcií - pruh cez celú šírku */
+.section-title td {
+    background-color: var(--section-bg) !important;
+    color: var(--primary);
+    font-weight: bold;
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+span[id] {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Bonusy naľavo */
+.bonus-section { margin-top: 25px; padding: 20px; background: var(--section-bg); border-radius: 10px; }
+.bonus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.bonus-item { display: flex; align-items: center; cursor: pointer; font-size: 0.9rem; font-weight: 700; position: relative; padding-left: 35px; }
+.bonus-item input { position: absolute; opacity: 0; }
+.checkmark { position: absolute; top: 0; left: 0; height: 22px; width: 22px; background-color: #fff; border: 2px solid var(--border); border-radius: 6px; }
+.bonus-item input:checked ~ .checkmark { background-color: var(--primary); border-color: var(--primary); }
+.checkmark:after { content: ""; position: absolute; display: none; left: 7px; top: 3px; width: 5px; height: 10px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.bonus-item input:checked ~ .checkmark:after { display: block; }
+
+.budget-info { margin-top: 25px; padding: 15px; background: #eff6ff; border-radius: 8px; font-size: 0.9rem; border: 1px solid #dbeafe; }
+
+@media (max-width: 1000px) { .dashboard { grid-template-columns: 1fr; } }
+
+tr.section-title {
+    outline: 12px solid #f1f5f9; /* Použije obrys namiesto pozadia */
+    outline-offset: -12px;
+}
