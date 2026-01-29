@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const totalCols = 1 + 1 + (isB15 ? 1 : 0) + (isB25 ? 1 : 0);
                     tableHTML += `
                         <tr style="background-color: #eff6ff;">
-                            <td colspan="${totalCols}" style="padding: 8px; font-weight: bold; color: #1e40af; font-size: 11px; border: 1px solid #cbd5e1; text-align: center; text-transform: uppercase;">
+                            <td colspan="${totalCols}" style="padding: 8px; font-weight: bold; color: #1e40af; font-size: 10px; border: 1px solid #cbd5e1; text-align: center; text-transform: uppercase;">
                                 ${row.cells[0].innerText.trim()}
                             </td>
                         </tr>`;
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const visibleCells = Array.from(row.cells).filter(c => window.getComputedStyle(c).display !== 'none');
                     visibleCells.forEach((cell, idx) => {
                         tableHTML += `
-                            <td style="padding: 6px 10px; border: 1px solid #e2e8f0; font-size: 11px; color: black; text-align: ${idx === 0 ? 'left' : 'right'}; ${idx > 0 ? 'font-weight: bold;' : ''}">
+                            <td style="padding: 6px 10px; border: 1px solid #e2e8f0; font-size: 10px; color: black; text-align: ${idx === 0 ? 'left' : 'right'}; ${idx > 0 ? 'font-weight: bold;' : ''}">
                                 ${cell.innerText.trim()}
                             </td>`;
                     });
@@ -237,3 +237,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
