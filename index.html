@@ -16,6 +16,17 @@
             <section class="inputs">
                 <form id="insuranceForm">
                     <h3>Základné údaje</h3>
+
+                    <div class="input-group">
+                        <label for="clientName">Meno poisťovacieho agenta</label>
+                        <input type="text" id="managerName" placeholder="Zadajte meno" style="width: 100%; padding: 10px; background-color: #0f172a; border: 1px solid var(--border); border-radius: 8px; color: white;">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="clientName">Meno a priezvisko klienta</label>
+                        <input type="text" id="clientName" placeholder="Zadajte meno" style="width: 100%; padding: 10px; background-color: #0f172a; border: 1px solid var(--border); border-radius: 8px; color: white;">
+                    </div>
+
                     <div class="input-group">
                         <label>Čistý príjem (€)</label>
                         <input type="number" id="netIncome" value="1000">
@@ -76,7 +87,9 @@
                     <div class="total-summary">
                         Spolu: <span id="total">150.00</span> €
                     </div>
-                    
+
+                    <button id="downloadPdf" type="button" class="pdf-btn">Stiahnuť PDF report</button>
+
                 </form>
             </section>
 
@@ -119,6 +132,7 @@
             </section>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="static/script.js"></script>
 </body>
 </html>
