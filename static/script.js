@@ -6,9 +6,24 @@ function updateText(id, value) {
 function calculateInsurance() {
     // 1. Vstupy
     const income = parseFloat(document.getElementById('netIncome').value) || 0;
+    const coverage = parseFloat(document.getElementById('coverage').value) || 0;
+    const investment = parseFloat(document.getElementById('investment').value) || 0;
+    const retirement = parseFloat(document.getElementById('retirement').value) || 0;
+    
     const age_18 = parseFloat(document.getElementById('age_18').value) || 0;
     const age_65 = parseFloat(document.getElementById('age_65').value) || 0;
     const mortage = parseFloat(document.getElementById('mortage').value) || 0;
+
+    const coverageAmount = (coverage / 100) * income;
+    const investmentAmount = (investment / 100) * income;
+    const retirementAmount = (retirement / 100) * income;
+    const total = coverageAmount + investmentAmount + retirementAmount;
+
+    updateText('total', total.toFixed(2));
+    updateText('r-coverage', coverageAmount.toFixed(2));
+    updateText('r-investment', investmentAmount.toFixed(2));
+    updateText('r-retirement', retirementAmount.toFixed(2));
+
 
     // 2. Základné sumy (Risks)
     const risks = {
