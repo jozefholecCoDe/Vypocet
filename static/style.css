@@ -13,7 +13,6 @@
 
 /* Global Styles */
 body {
-    zoom: 81.5%;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -218,3 +217,4 @@ span[id] { font-weight: 700; color: var(--text-main); }
     .dashboard { grid-template-columns: 1fr; }
     .container { padding: 15px; }
 }
+
