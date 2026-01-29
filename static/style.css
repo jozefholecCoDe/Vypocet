@@ -217,4 +217,3 @@ span[id] { font-weight: 700; color: var(--text-main); }
     .dashboard { grid-template-columns: 1fr; }
     .container { padding: 15px; }
 }
-
